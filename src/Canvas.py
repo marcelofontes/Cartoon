@@ -16,6 +16,8 @@ class Canvas(object):
     def run(self):
         """run the main loop"""
         self._captureManager = CaptureManager(self._image, self._windowManager)
+        self._image = self._captureManager.image
+        self._actualImage = self._captureManager.image
         self._windowManager.createWindow()
         
         while self._windowManager.isWindowCreated:
